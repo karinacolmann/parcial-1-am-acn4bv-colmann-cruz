@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">parcial-1-am-acn4bv-colmann-cruz</string>
-    <string name="textViewMessageContent">Este es el buscador</string>
+    <string name="textViewContent">Este es un buscador</string>
 </resources>
