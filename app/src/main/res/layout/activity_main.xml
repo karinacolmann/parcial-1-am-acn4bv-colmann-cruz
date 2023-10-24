@@ -60,6 +60,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_bottom_bar"
+        app:itemTextColor="@drawable/vector_color"
+        app:itemIconTint="@drawable/vector_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
