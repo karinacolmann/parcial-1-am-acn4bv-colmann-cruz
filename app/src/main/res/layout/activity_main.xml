@@ -19,8 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-    </LinearLayout>
-
     <android.widget.SearchView
         android:id="@+id/searchBar"
         android:layout_width="0dp"
@@ -35,15 +33,5 @@
 
 
 </LinearLayout>
-
-
-
-
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
