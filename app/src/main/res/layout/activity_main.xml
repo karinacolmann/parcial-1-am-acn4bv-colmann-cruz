@@ -340,7 +340,7 @@
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/halloween_title"
-                    android:src="@drawable/ddfdfdf"/>
+                    android:src="@drawable/halloween"/>
 
 
                 <LinearLayout
