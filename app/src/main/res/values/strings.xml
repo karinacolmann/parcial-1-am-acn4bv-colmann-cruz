@@ -14,4 +14,6 @@
     <string name="mas_descargados">Mas descargados</string>
     <string name="consolas">Consolas</string>
     <string name="novedades">Novedades</string>
+    <string name="halloween_title">Halloween Discount Event</string>
+    <string name="halloween_subtext">Open the boxes and find amazing prizes!</string>
 </resources>

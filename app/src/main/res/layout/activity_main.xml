@@ -141,7 +141,7 @@
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/subcarpeta" />
+                            android:src="@drawable/subcarpeta"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -323,22 +323,31 @@
 
             <LinearLayout
                 android:id="@+id/content"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="450dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="90dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/row3">
 
                 <TextView
                     android:id="@+id/contentTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Esto es un texto personalizado" />
+                    android:text="@string/halloween_title"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/subTextBoxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/halloween_subtext" />
 
             </LinearLayout>
 
