@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_search_color">#FF3B3B</color>
+    <color name="search_color">#EEEBEB</color>
+    <color name="hidden_text">#FFFFFF</color>
+
+    <color name="bg_layoutCenter">#FEFFFF</color>
+    <color name="bg_row_box">#FFFFFFFF</color>
+    <color name="row_box_text">#FF000000</color>
 </resources>

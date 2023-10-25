@@ -12,7 +12,7 @@
         android:id="@+id/layoutBase"
         android:layout_width="411dp"
         android:layout_height="73dp"
-        android:background="#F44336"
+        android:background="@color/bg_search_color"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/textViewBox"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
-            android:background="#E2E3E0"
+            android:background="@color/search_color"
             android:queryHint="Search"
             tools:layout_marginBottom="15dp" />
     </LinearLayout>
@@ -36,7 +36,7 @@
         android:id="@+id/textViewBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:background="@color/hidden_text"
         android:text="@string/textViewContent"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/layoutCenter"
@@ -48,8 +48,7 @@
         android:id="@+id/layoutCenter"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#FEFFFF"
-
+        android:background="@color/bg_layoutCenter"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +84,7 @@
                         android:id="@+id/destacadosLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white">
+                        android:background="@color/bg_row_box">
 
                         <TextView
                             android:id="@+id/destacadosName"
@@ -96,7 +95,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/metrophobic"
                             android:text="@string/destacados"
-                            android:textColor="@color/black"
+                            android:textColor="@color/row_box_text"
                             android:textSize="15sp" />
 
                         <ImageView
@@ -121,7 +120,7 @@
                         android:id="@+id/categLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white">
+                        android:background="@color/bg_row_box">
 
                         <TextView
                             android:id="@+id/categName"
@@ -132,7 +131,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
                             android:text="@string/categorias"
-                            android:textColor="@color/black"
+                            android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
@@ -171,7 +170,7 @@
                         android:id="@+id/gratuitosLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white">
+                        android:background="@color/bg_row_box">
 
                         <TextView
                             android:id="@+id/gratuitosName"
@@ -182,7 +181,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
                             android:text="@string/gratuitos"
-                            android:textColor="@color/black"
+                            android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
@@ -208,7 +207,7 @@
                         android:id="@+id/descargadosLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white">
+                        android:background="@color/bg_row_box">
 
                         <TextView
                             android:id="@+id/descargadosName"
@@ -219,7 +218,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
                             android:text="@string/mas_descargados"
-                            android:textColor="@color/black"
+                            android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
@@ -258,7 +257,7 @@
                         android:id="@+id/consolLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white">
+                        android:background="@color/bg_row_box">
 
                         <TextView
                             android:id="@+id/consolName"
@@ -269,7 +268,7 @@
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
                             android:text="@string/consolas"
-                            android:textColor="@color/black"
+                            android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
@@ -295,7 +294,7 @@
                         android:id="@+id/novLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/white">
+                        android:background="@color/bg_row_box">
 
                         <TextView
                             android:id="@+id/novName"
@@ -306,7 +305,7 @@
                             android:layout_marginTop="10dp"
 
                             android:text="@string/novedades"
-                            android:textColor="@color/black"
+                            android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
@@ -317,6 +316,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
                             android:src="@drawable/consolajuego" />
+
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -355,6 +355,7 @@
         app:menu="@menu/menu_bottom_bar"
         app:itemTextColor="@drawable/vector_color"
         app:itemIconTint="@drawable/vector_color"
+        android:background="@drawable/background_vector_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

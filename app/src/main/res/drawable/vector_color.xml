@@ -3,11 +3,12 @@
 
 
     <item
-    android:color ="#B81111"
+    android:color ="#FF3B3B"
     android:state_selected="true"/>
 
     <item
-        android:color ="#FF2B2B"
+        android:color ="#FF3B3B"
         android:state_selected="false"/>
+
 
 </selector>
