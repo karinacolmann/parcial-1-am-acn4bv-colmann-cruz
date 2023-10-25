@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">parcial-1-am-acn4bv-colmann-cruz</string>
+    <string name="textViewContent">Este es un texto oculto</string>
+    <string name="textViewContentSecondTOnClick">Esto es un buscador</string>
+
+
+
+    <string name="bar_home">Home</string>
+    <string name="bar_collection">Collection</string>
+    <string name="bar_wishlist">Wishlist</string>
+    <string name="bar_profile">Profile</string>
 </resources>
