@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         Button contentButton = new Button(this);
         contentButton.setText("Mystery Box");
 
