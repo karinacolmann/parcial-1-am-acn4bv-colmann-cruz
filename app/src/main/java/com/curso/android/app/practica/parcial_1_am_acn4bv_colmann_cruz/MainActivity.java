@@ -1,21 +1,17 @@
 package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
-import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +26,26 @@ public class MainActivity extends AppCompatActivity {
                 contentText.setText(R.string.textViewContentSecondTOnClick);
             }
         });
+
+        Button contentButton = new Button(this);
+        contentButton.setText("Mystery Box");
+
+        LinearLayout content = findViewById(R.id.content);
+        content.addView (contentButton);
+
+        contentButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick (View view) {
+
+                TextView contentTitle =findViewById (R.id.contentTitle);
+                contentTitle.setText("El Texto fue Actualizado");
+            }
+
+        });
+
+
+
 
     }
 }
