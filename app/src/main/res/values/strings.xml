@@ -8,12 +8,12 @@
     <string name="bar_wishlist">Wishlist</string>
     <string name="bar_profile">Profile</string>
 
-    <string name="destacados">Destacados</string>
-    <string name="categorias">Categorias</string>
-    <string name="gratuitos">Free Download</string>
-    <string name="mas_descargados">Mas descargados</string>
-    <string name="consolas">Consolas</string>
-    <string name="novedades">Novedades</string>
+    <string name="newReleaseText">New Releases</string>
+    <string name="freeDownloadText">Free Download</string>
+    <string name="topSellerText">Top Sellers</string>
+    <string name="mostPlayedText">Most Played</string>
+    <string name="saleEventsText">Sale Events</string>
+    <string name="communityText">Community</string>
 
     <string name="halloween_title">Halloween Discount Event</string>
     <string name="halloween_subtext">Open the boxes and find amazing prizes!</string>

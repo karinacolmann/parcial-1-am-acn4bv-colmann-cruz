@@ -72,7 +72,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/destacadosCard"
+                    android:id="@+id/newReleaseCard"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -81,30 +81,30 @@
                     app:cardElevation="3dp">
 
                     <RelativeLayout
-                        android:id="@+id/destacadosLayout"
+                        android:id="@+id/newReleaseLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/bg_row_box">
 
                         <TextView
-                            android:id="@+id/destacadosName"
+                            android:id="@+id/newReleaseTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/destacadosImage"
+                            android:layout_below="@+id/newReleaseIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/metrophobic"
-                            android:text="@string/destacados"
+                            android:text="@string/newReleaseText"
                             android:textColor="@color/row_box_text"
                             android:textSize="15sp" />
 
                         <ImageView
-                            android:id="@+id/destacadosImage"
+                            android:id="@+id/newReleaseIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/favorito" />
+                            android:src="@drawable/icon_new_release" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -117,31 +117,31 @@
                     app:cardElevation="3dp">
 
                     <RelativeLayout
-                        android:id="@+id/categLayout"
+                        android:id="@+id/freeDownloadLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/bg_row_box">
 
                         <TextView
-                            android:id="@+id/categName"
+                            android:id="@+id/freeDownloadTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/categImage"
+                            android:layout_below="@+id/freeDownloadIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
-                            android:text="@string/categorias"
+                            android:text="@string/freeDownloadText"
                             android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
                         <ImageView
-                            android:id="@+id/categImage"
+                            android:id="@+id/freeDownloadIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/subcarpeta"/>
+                            android:src="@drawable/icon_free_download"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -167,31 +167,31 @@
                     app:cardElevation="3dp">
 
                     <RelativeLayout
-                        android:id="@+id/gratuitosLayout"
+                        android:id="@+id/topSellersLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/bg_row_box">
 
                         <TextView
-                            android:id="@+id/gratuitosName"
+                            android:id="@+id/topSellersTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/gatuitosImage"
+                            android:layout_below="@+id/topSellersIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
-                            android:text="@string/gratuitos"
+                            android:text="@string/topSellerText"
                             android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
                         <ImageView
-                            android:id="@+id/gatuitosImage"
+                            android:id="@+id/topSellersIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/consola" />
+                            android:src="@drawable/trophy" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -204,31 +204,31 @@
                     app:cardElevation="3dp">
 
                     <RelativeLayout
-                        android:id="@+id/descargadosLayout"
+                        android:id="@+id/mostPlayedLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/bg_row_box">
 
                         <TextView
-                            android:id="@+id/descargadosName"
+                            android:id="@+id/mostPlayedTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/descargadosImage"
+                            android:layout_below="@+id/mostPlayedIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
-                            android:text="@string/mas_descargados"
+                            android:text="@string/mostPlayedText"
                             android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
                         <ImageView
-                            android:id="@+id/descargadosImage"
+                            android:id="@+id/mostPlayedIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/medalla" />
+                            android:src="@drawable/sword" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -254,31 +254,31 @@
                     app:cardElevation="3dp">
 
                     <RelativeLayout
-                        android:id="@+id/consolLayout"
+                        android:id="@+id/saleEventsLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/bg_row_box">
 
                         <TextView
-                            android:id="@+id/consolName"
+                            android:id="@+id/saleEventsTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/consolImage"
+                            android:layout_below="@+id/saleEventsIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif"
-                            android:text="@string/consolas"
+                            android:text="@string/saleEventsText"
                             android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
                         <ImageView
-                            android:id="@+id/consolImage"
+                            android:id="@+id/saleEventsIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/palancamando" />
+                            android:src="@drawable/icon_sale" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -291,31 +291,31 @@
                     app:cardElevation="3dp">
 
                     <RelativeLayout
-                        android:id="@+id/novLayout"
+                        android:id="@+id/communityLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/bg_row_box">
 
                         <TextView
-                            android:id="@+id/novName"
+                            android:id="@+id/communityTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/novImage"
+                            android:layout_below="@+id/communityIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
 
-                            android:text="@string/novedades"
+                            android:text="@string/communityText"
                             android:textColor="@color/row_box_text"
                             android:textSize="15sp"
                             tools:fontFamily="@font/metrophobic" />
 
                         <ImageView
-                            android:id="@+id/novImage"
+                            android:id="@+id/communityIcon"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/consolajuego" />
+                            android:src="@drawable/icon_community" />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
