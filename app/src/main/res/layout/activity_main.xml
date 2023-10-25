@@ -92,7 +92,7 @@
                             android:layout_below="@+id/newReleaseIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/metrophobic"
+                            android:fontFamily="@font/alata"
                             android:text="@string/newReleaseText"
                             android:textColor="@color/row_box_text"
                             android:textSize="15sp" />
@@ -129,11 +129,10 @@
                             android:layout_below="@+id/freeDownloadIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="sans-serif"
+                            android:fontFamily="@font/alata"
                             android:text="@string/freeDownloadText"
                             android:textColor="@color/row_box_text"
-                            android:textSize="15sp"
-                            tools:fontFamily="@font/metrophobic" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/freeDownloadIcon"
@@ -180,11 +179,10 @@
                             android:layout_below="@+id/topSellersIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="sans-serif"
+                            android:fontFamily="@font/alata"
                             android:text="@string/topSellerText"
                             android:textColor="@color/row_box_text"
-                            android:textSize="15sp"
-                            tools:fontFamily="@font/metrophobic" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/topSellersIcon"
@@ -218,11 +216,10 @@
                             android:layout_below="@+id/mostPlayedIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="sans-serif"
+                            android:fontFamily="@font/alata"
                             android:text="@string/mostPlayedText"
                             android:textColor="@color/row_box_text"
-                            android:textSize="15sp"
-                            tools:fontFamily="@font/metrophobic" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/mostPlayedIcon"
@@ -269,11 +266,10 @@
                             android:layout_below="@+id/saleEventsIcon"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="sans-serif"
+                            android:fontFamily="@font/alata"
                             android:text="@string/saleEventsText"
                             android:textColor="@color/row_box_text"
-                            android:textSize="15sp"
-                            tools:fontFamily="@font/metrophobic" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/saleEventsIcon"
@@ -308,10 +304,10 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
 
+                            android:fontFamily="@font/alata"
                             android:text="@string/communityText"
                             android:textColor="@color/row_box_text"
-                            android:textSize="15sp"
-                            tools:fontFamily="@font/metrophobic" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/communityIcon"
@@ -338,12 +334,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/row3">
 
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ddfdfdf"
+                    app:srcCompat="@drawable/ddfdfdf"/>
 
 
                 <LinearLayout
@@ -357,16 +353,18 @@
                         android:id="@+id/contentTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/lilita_one"
                         android:text="@string/halloween_title"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="#FFFFFF"
-                        android:textSize="16sp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/subTextBoxes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textAlignment="center"
                         android:text="@string/halloween_subtext"
                         android:textColor="#FFFFFF" />
 

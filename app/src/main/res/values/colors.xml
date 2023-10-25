@@ -10,4 +10,12 @@
     <color name="bg_layoutCenter">#FEFFFF</color>
     <color name="bg_row_box">#FFFFFFFF</color>
     <color name="row_box_text">#FF000000</color>
+
+    <!-- colores de eventos botones -->
+    <color name="release">#8BC34A</color>
+    <color name="freeDownload">#FF9800</color>
+    <color name="topSellers">#4CAF50</color>
+    <color name="mostPlayed">#C44CD8</color>
+    <color name="saleEvents">#2196F3</color>
+    <color name="community">#F44336</color>
 </resources>
