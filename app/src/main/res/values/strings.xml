@@ -17,4 +17,10 @@
 
     <string name="halloween_title">Halloween Discount Event</string>
     <string name="halloween_subtext">Open the boxes and find amazing prizes!</string>
+    <string name="description_community_pic">community picture</string>
+    <string name="description_mostplayed">description_mostplayed_pic</string>
+    <string name="description_freedownload">description_freedownload_pic</string>
+    <string name="description_newrelease_pic">description_newrelease_pic</string>
+    <string name="description_topseller">description_topseller</string>
+    <string name="description_saleevent">description_saleevent</string>
 </resources>

@@ -104,7 +104,8 @@
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/icon_new_release" />
+                            android:src="@drawable/icon_new_release"
+                            android:contentDescription="@string/description_newrelease_pic" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -141,7 +142,8 @@
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/icon_free_download"/>
+                            android:src="@drawable/icon_free_download"
+                            android:contentDescription="@string/description_freedownload" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -191,7 +193,8 @@
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/trophy" />
+                            android:src="@drawable/icon_top_sellers"
+                            android:contentDescription="@string/description_topseller" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -228,7 +231,8 @@
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/sword" />
+                            android:src="@drawable/icon_most_played"
+                            android:contentDescription="@string/description_mostplayed" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -278,7 +282,8 @@
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/icon_sale" />
+                            android:src="@drawable/icon_sale"
+                            android:contentDescription="@string/description_saleevent" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -315,7 +320,8 @@
                             android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            android:src="@drawable/icon_community" />
+                            android:src="@drawable/icon_community"
+                            android:contentDescription="@string/description_community_pic" />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
