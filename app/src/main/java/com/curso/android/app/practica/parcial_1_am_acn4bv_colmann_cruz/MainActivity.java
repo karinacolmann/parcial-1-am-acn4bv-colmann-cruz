@@ -11,13 +11,11 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.navigation.NavigationBarView;
-
-import org.jetbrains.annotations.NonNls;
-
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +30,10 @@ public class MainActivity extends AppCompatActivity {
                 contentText.setText(R.string.textViewContentSecondTOnClick);
             }
         });
+
     }
-
-
-
-
 }
+
 
 
 

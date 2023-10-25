@@ -28,7 +28,7 @@
             android:layout_marginEnd="15dp"
             android:background="#9DEC41"
             android:queryHint="Search"
-            tools:layout_marginBottom="15dp" />
+            tools:layout_marginBottom="15dp"/>
     </LinearLayout>
 
     <TextView
@@ -61,6 +61,7 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick ="showToast"
         app:menu="@menu/menu_bottom_bar"
         app:itemTextColor="@drawable/vector_color"
         app:itemIconTint="@drawable/vector_color"
