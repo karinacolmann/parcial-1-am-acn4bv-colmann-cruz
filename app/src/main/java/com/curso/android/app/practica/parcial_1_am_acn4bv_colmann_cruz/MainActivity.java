@@ -9,19 +9,19 @@ import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
 
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SearchView searchBar = findViewById(R.id.searchBar);
+        SearchView searchBar=findViewById(R.id.searchBar);
         searchBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView contentText = findViewById(R.id.textViewBox);
+                TextView contentText =findViewById(R.id.textViewBox);
                 contentText.setVisibility(View.VISIBLE);
                 contentText.setText(R.string.textViewContentSecondTOnClick);
             }
@@ -44,12 +44,5 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
-
-
     }
 }
-
-
-
-

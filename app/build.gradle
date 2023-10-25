@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz"
