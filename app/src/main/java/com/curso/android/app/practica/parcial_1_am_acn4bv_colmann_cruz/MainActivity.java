@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick (View view) {
 
                 TextView contentTitle =findViewById (R.id.contentTitle);
-                contentTitle.setText("El Texto fue Actualizado");
+                contentTitle.setText("STAY TUNED!");
             }
 
         });
