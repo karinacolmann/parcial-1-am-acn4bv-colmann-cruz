@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+    <!--Search-->
     <LinearLayout
         android:id="@+id/layoutBase"
         android:layout_width="411dp"
@@ -43,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutBase" />
 
+    <!--Back-->
     <LinearLayout
         android:id="@+id/layoutCenter"
         android:layout_width="0dp"
@@ -325,7 +326,7 @@
             <FrameLayout
                 android:id="@+id/content"
                 android:layout_width="369dp"
-                android:layout_height="142dp"
+                android:layout_height="70dp"
                 android:layout_marginBottom="24dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -333,45 +334,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/row3">
 
-
-                <ImageButton
-                    android:id="@+id/imageView2"
+                <Button
+                    android:id="@+id/buttonProvisorio"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:contentDescription="@string/halloween_title"
-                    android:src="@drawable/halloween"/>
-
-
-                <LinearLayout
-                    android:id="@+id/layoutTextBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/contentTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lilita_one"
-                        android:text="@string/halloween_title"
-                        android:textAlignment="center"
-                        android:textAllCaps="true"
-                        android:textColor="#FFFFFF"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/subTextBoxes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="@string/halloween_subtext"
-                        android:textColor="#FFFFFF" />
-
-                </LinearLayout>
-
-
+                    android:layout_height="wrap_content"
+                    android:text="Button"
+                    android:layout_gravity="center"/>
 
             </FrameLayout>
 
@@ -381,6 +349,7 @@
 
     </LinearLayout>
 
+    <!--Nav-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
