@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreeDownload">
+
+    <LinearLayout
+        android:id="@+id/layoutBase"
+        android:layout_width="411dp"
+        android:layout_height="73dp"
+        android:background="@color/bg_search_color"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/textViewBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/search_color"
+            android:queryHint="Search"
+            tools:layout_marginBottom="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/hidden_text"
+        android:text="@string/textViewContent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/layoutCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutBase" />
+
+    <LinearLayout
+        android:id="@+id/layoutCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/bg_layoutCenter"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBox">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+            <FrameLayout
+                android:id="@+id/content"
+                android:layout_width="369dp"
+                android:layout_height="142dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+
+                <ImageButton
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/halloween_title"
+                    android:src="@drawable/halloween"/>
+
+
+                <LinearLayout
+                    android:id="@+id/layoutTextBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/contentTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lilita_one"
+                        android:text="@string/halloween_title"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/subTextBoxes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="@string/halloween_subtext"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_vector_color"
+        app:itemIconTint="@drawable/vector_color"
+        app:itemTextColor="@drawable/vector_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCenter"
+        app:menu="@menu/menu_bottom_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
