@@ -170,9 +170,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    //Intent free download
-    public void FreeDownload (View view){
-        Intent freeDownload = new Intent(this,FreeDownload.class);
-        startActivity(freeDownload);
-    }
+
 }
