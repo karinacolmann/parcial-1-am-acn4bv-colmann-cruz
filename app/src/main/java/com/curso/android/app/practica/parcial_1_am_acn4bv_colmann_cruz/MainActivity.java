@@ -2,6 +2,7 @@ package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         SearchView searchBar=findViewById(R.id.searchBar);
         searchBar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,22 +41,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button contentButton = new Button(this);
-        contentButton.setText("Mystery Box");
-
-        LinearLayout layoutTextBox = findViewById(R.id.layoutTextBox);
-        layoutTextBox.addView (contentButton);
-
-        contentButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick (View view) {
-
-                TextView contentTitle =findViewById (R.id.contentTitle);
-                contentTitle.setText("TRY AGAIN!");
-            }
-
-        });
 
         //evento ReleaseLayout
         newReleaseLayout = findViewById(R.id.newReleaseLayout);
@@ -76,24 +63,27 @@ public class MainActivity extends AppCompatActivity {
         });//fin
 
         //evento freeDownloadLayout
-        freeDownloadLayout = findViewById(R.id.freeDownloadLayout);
-        android.widget.TextView freeDownloadTitle = findViewById(R.id.freeDownloadTitle);
         freeDownloadLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 freeDownloadLayout.setBackgroundResource(R.color.freeDownload);
-                freeDownloadTitle.setTextColor(getResources().getColor(R.color.white));
-                //Toast
+
                 Toast.makeText(getApplicationContext(), "¡Descargá Gratis!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, FreeDownload.class);
+                startActivity(intent);
+
                 freeDownloadLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         freeDownloadLayout.setBackgroundResource(R.color.white);
-                        freeDownloadTitle.setTextColor(getResources().getColor(R.color.black));
+
                     }
                 }, 1000);
             }
-        });//fin
+        });
+//fin
 
         //evento topSellersLayout
         topSellersLayout = findViewById(R.id.topSellersLayout);
@@ -179,5 +169,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+    //Intent free download
+    public void FreeDownload (View view){
+        Intent freeDownload = new Intent(this,FreeDownload.class);
+        startActivity(freeDownload);
     }
 }
