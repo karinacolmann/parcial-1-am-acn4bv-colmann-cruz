@@ -9,13 +9,12 @@
 
     <LinearLayout
         android:id="@+id/layoutBase"
-        android:layout_width="411dp"
-        android:layout_height="73dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/bg_search_color"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/textViewBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,9 +22,10 @@
             android:id="@+id/searchBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@color/search_color"
             android:queryHint="Search"
             tools:layout_marginBottom="15dp" />
