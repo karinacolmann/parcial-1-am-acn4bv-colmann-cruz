@@ -2,9 +2,8 @@ package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -12,11 +11,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private FirebaseAuth mAuth;
     RelativeLayout newReleaseLayout;
     RelativeLayout freeDownloadLayout;
     RelativeLayout topSellersLayout;
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mAuth = FirebaseAuth.getInstance();
+
+
         SearchView searchBar=findViewById(R.id.searchBar);
         searchBar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,22 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button contentButton = new Button(this);
-        contentButton.setText("Mystery Box");
 
-        LinearLayout layoutTextBox = findViewById(R.id.layoutTextBox);
-        layoutTextBox.addView (contentButton);
-
-        contentButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick (View view) {
-
-                TextView contentTitle =findViewById (R.id.contentTitle);
-                contentTitle.setText("TRY AGAIN!");
-            }
-
-        });
 
         //evento ReleaseLayout
         newReleaseLayout = findViewById(R.id.newReleaseLayout);
@@ -190,5 +179,31 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Log.i ("firebase", "El usuario existe. Accediste a la pantalla principal.");
+
+        } else{
+            Intent intent = new Intent (getApplicationContext(), LoginActivity.class);
+            startActivity (intent);
+            Log.i ("firebase", "deberia logearme porque no hay usuario");
+
+        }
+    }
+
+    //Para Cerrar sesion
+
+    public void logout (View v){
+        mAuth.signOut();
+        Intent intent = new Intent (getApplicationContext(), LoginActivity.class);
+        startActivity (intent);
+        Log.i ("firebase", "Volví a la pantalla del login.");
+    }
+
 
 }
