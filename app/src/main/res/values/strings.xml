@@ -25,7 +25,6 @@
     <string name="description_saleevent">description_saleevent</string>
 
 
-
     //NEW RELEASES //
 
     <string name="textViewGame1Title">COUNTER STRIKE 2</string>
@@ -36,5 +35,6 @@
     <string name="textViewGame6Title">PUBG: BATTLEGROUNDS</string>
     <string name="backbuttontomain">backButtonToMain</string>
     <string name="contentButtonText">Actualizar</string>
+    <string name="cerrarSesionButtonText">Cerrar Sesion</string>
 
 </resources>
