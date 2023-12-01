@@ -88,6 +88,13 @@ public class MainActivity extends AppCompatActivity {
                         freeDownloadTitle.setTextColor(getResources().getColor(R.color.black));
                     }
                 }, 1000);
+
+                //Intent que conduce al Activity 'Free Download'
+                Intent intent = new Intent(MainActivity.this, FreeDownloadActivity.class);
+                startActivity(intent);
+
+
+
             }
         });//fin
 
