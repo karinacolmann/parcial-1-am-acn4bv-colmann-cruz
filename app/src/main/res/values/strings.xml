@@ -26,6 +26,8 @@
 
 
     //NEW RELEASES //
+    <string name="backbuttontomain">backButtonToMain</string>
+
 
     <string name="textViewGame1Title">COUNTER STRIKE 2</string>
     <string name="textViewGame2Title">GTA 5</string>
@@ -33,13 +35,9 @@
     <string name="textViewGame4Title">DESTINY 2</string>
     <string name="textViewGame5Title">CALL OF DUTY</string>
     <string name="textViewGame6Title">PUBG: BATTLEGROUNDS</string>
-    <string name="backbuttontomain">backButtonToMain</string>
-
 
     <string name="contentButtonText">Actualizar</string>
     <string name="cerrarSesionButtonText">Cerrar Sesion</string>
-
-
 
     <string name="description_game1">description_game1_pic</string>
     <string name="description_game2">description_game2_pic</string>
