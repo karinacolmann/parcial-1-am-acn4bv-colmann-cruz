@@ -16,16 +16,16 @@
         android:theme="@style/Theme.Parcial1amacn4bvcolmanncruz"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:name=".FreeDownloadActivity"
             android:exported="false" />
-
-
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
             android:name=".NewRelease"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
-            android:exported="false" />
-
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

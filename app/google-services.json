@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "750320119826",
+    "project_id": "bubble-games-tp",
+    "storage_bucket": "bubble-games-tp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750320119826:android:a4fbd60a632c9a24f2e8cb",
+        "android_client_info": {
+          "package_name": "com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYCYpWep8OLzt8fd6xswEPAzXLDPvV3zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
