@@ -35,5 +35,6 @@
     <string name="textViewGame5Title">CALL OF DUTY</string>
     <string name="textViewGame6Title">PUBG: BATTLEGROUNDS</string>
     <string name="backbuttontomain">backButtonToMain</string>
+    <string name="contentButtonText">Actualizar</string>
 
 </resources>
