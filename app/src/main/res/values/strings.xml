@@ -47,4 +47,9 @@
     <string name="description_game6">description_game6_pic</string>
 
 
+
+    <string name="emailTitle">Email:</string>
+    <string name="login_button_text">Login</string>
+    <string name="passwordTitle">Password:</string>
+
 </resources>
