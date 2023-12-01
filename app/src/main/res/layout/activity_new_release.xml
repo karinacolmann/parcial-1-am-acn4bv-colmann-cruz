@@ -42,7 +42,7 @@
         android:id="@+id/layoutCenterArrayPic"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#FF9800"
+        android:background="#FFFFFF"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf ="@id/layoutBase"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
         <ScrollView
             android:id="@+id/scrollBase"
             android:layout_width="match_parent"
-            android:layout_height="458dp"
+            android:layout_height="504dp"
             android:background="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -78,8 +78,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/coustrike"
-                        android:contentDescription="@string/description_game1" />
+                        android:contentDescription="@string/description_game1"
+                        android:src="@drawable/coustrike" />
 
                     <TextView
                         android:id="@+id/textViewGame1"
@@ -103,8 +103,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/grandtheftauto_cinco"
-                        android:contentDescription="@string/description_game2" />
+                        android:contentDescription="@string/description_game2"
+                        android:src="@drawable/grandtheftauto_cinco" />
 
                     <TextView
                         android:id="@+id/textViewGame2"
@@ -129,8 +129,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/eafc"
-                        android:contentDescription="@string/description_game3" />
+                        android:contentDescription="@string/description_game3"
+                        android:src="@drawable/eafc" />
 
                     <TextView
                         android:id="@+id/textViewGame3"
@@ -154,8 +154,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/destinty_dos"
-                        android:contentDescription="@string/description_game4" />
+                        android:contentDescription="@string/description_game4"
+                        android:src="@drawable/destinty_dos" />
 
                     <TextView
                         android:id="@+id/textViewGame4"
@@ -179,8 +179,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/callofduty"
-                        android:contentDescription="@string/description_game5" />
+                        android:contentDescription="@string/description_game5"
+                        android:src="@drawable/callofduty" />
 
                     <TextView
                         android:id="@+id/textViewGame5"
@@ -205,8 +205,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/battle"
-                        android:contentDescription="@string/description_game6" />
+                        android:contentDescription="@string/description_game6"
+                        android:src="@drawable/battle" />
 
                     <TextView
                         android:id="@+id/textViewGame6"
