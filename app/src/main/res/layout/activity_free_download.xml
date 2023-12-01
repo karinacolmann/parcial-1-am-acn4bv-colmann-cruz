@@ -86,7 +86,7 @@
                         android:id="@+id/contentTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/alata"
+                        android:fontFamily="@font/lilita_one"
                         android:text="@string/christmas_event"
                         android:textAlignment="center"
                         android:textAllCaps="true"
