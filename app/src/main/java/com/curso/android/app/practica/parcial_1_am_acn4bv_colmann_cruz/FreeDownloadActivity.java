@@ -1,0 +1,14 @@
+package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class FreeDownloadActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_free_download);
+    }
+}
