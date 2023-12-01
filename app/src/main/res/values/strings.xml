@@ -23,4 +23,17 @@
     <string name="description_newrelease_pic">description_newrelease_pic</string>
     <string name="description_topseller">description_topseller</string>
     <string name="description_saleevent">description_saleevent</string>
+
+
+
+    //NEW RELEASES //
+
+    <string name="textViewGame1Title">COUNTER STRIKE 2</string>
+    <string name="textViewGame2Title">GTA 5</string>
+    <string name="textViewGame3Title">EA SPORTS FC™ 24</string>
+    <string name="textViewGame4Title">DESTINY 2</string>
+    <string name="textViewGame5Title">CALL OF DUTY</string>
+    <string name="textViewGame6Title">PUBG: BATTLEGROUNDS</string>
+    <string name="backbuttontomain">backButtonToMain</string>
+
 </resources>

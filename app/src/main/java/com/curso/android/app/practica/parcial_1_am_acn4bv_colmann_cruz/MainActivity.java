@@ -1,20 +1,21 @@
 package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     RelativeLayout newReleaseLayout;
     RelativeLayout freeDownloadLayout;
@@ -73,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
                         newReleaseTitle.setTextColor(getResources().getColor(R.color.black));
                     }
                 }, 1000);
+
+
+                //Intent que conduce al Activity 'New Release'
+                Intent intent = new Intent(MainActivity.this, NewRelease.class);
+                startActivity(intent);
             }
         });//fin
 
@@ -168,6 +174,9 @@ public class MainActivity extends AppCompatActivity {
 
                 //Toast
                 Toast.makeText(getApplicationContext(), "¡Unite a la Comunidad!", Toast.LENGTH_SHORT).show();
+
+
+
                 communityLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -181,4 +190,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }
