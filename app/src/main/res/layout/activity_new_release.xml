@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/texto"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewRelease">
@@ -70,7 +70,7 @@
                     android:layout_height="70dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="3dp"
-                    android:background="#40E4D5"
+                    android:background="#FFFFFF"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -95,7 +95,7 @@
                     android:layout_height="70dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="3dp"
-                    android:background="#A481E3"
+                    android:background="#FFFFFF"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -121,7 +121,7 @@
                     android:layout_height="70dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="3dp"
-                    android:background="#4CAF50"
+                    android:background="#FFFFFF"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -146,7 +146,7 @@
                     android:layout_height="70dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="3dp"
-                    android:background="#FAAB92"
+                    android:background="#FFFFFF"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -171,7 +171,7 @@
                     android:layout_height="70dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="3dp"
-                    android:background="#7386F1"
+                    android:background="#FFFFFF"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -196,7 +196,7 @@
                     android:layout_height="70dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="3dp"
-                    android:background="#7386F1"
+                    android:background="#FFFFFF"
 
                     android:orientation="horizontal">
 
@@ -222,25 +222,6 @@
 
         </ScrollView>
     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
