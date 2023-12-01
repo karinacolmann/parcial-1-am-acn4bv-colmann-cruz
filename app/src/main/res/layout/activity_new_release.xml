@@ -13,28 +13,22 @@
         android:layout_height="wrap_content"
         android:background="@color/bg_search_color"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/textViewBox"
+        app:layout_constraintBottom_toTopOf="@id/layoutCenterArrayPic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <SearchView
-            android:id="@+id/searchBar"
-            android:layout_width="247dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:background="@color/search_color"
-            android:queryHint="Search"
-            tools:layout_marginBottom="15dp" />
+
 
         <ImageView
             android:id="@+id/backButton"
             android:layout_width="62dp"
             android:layout_height="48dp"
             android:layout_margin="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
             android:clickable="true"
             android:onClick="onBackButtonClick"
             android:src="@drawable/round_arrow_back_ios_24"
@@ -42,17 +36,7 @@
             android:focusable="true" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/hidden_text"
-        android:text="@string/textViewContent"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/layoutCenterArrayPic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutBase" />
+
 
     <LinearLayout
         android:id="@+id/layoutCenterArrayPic"
@@ -60,9 +44,9 @@
         android:layout_height="0dp"
         android:background="#FF9800"
         android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf ="@id/layoutBase"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBox"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView">
 
         <ScrollView
@@ -85,7 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="3dp"
                     android:background="#40E4D5"
                     android:orientation="horizontal">
 
@@ -108,8 +92,8 @@
                     android:id="@+id/gameRowContainer2"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
                     android:background="#A481E3"
                     android:orientation="horizontal">
 
@@ -133,8 +117,8 @@
                     android:id="@+id/gameRowContainer3"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
                     android:background="#4CAF50"
                     android:orientation="horizontal">
 
@@ -157,8 +141,8 @@
                     android:id="@+id/gameRowContainer4"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
                     android:background="#FAAB92"
                     android:orientation="horizontal">
 
@@ -181,8 +165,8 @@
                     android:id="@+id/gameRowContainer5"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
                     android:background="#7386F1"
                     android:orientation="horizontal">
 
@@ -205,8 +189,8 @@
                     android:id="@+id/gameRowContainer6"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="3dp"
                     android:background="#7386F1"
 
                     android:orientation="horizontal">
@@ -265,6 +249,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCenterArrayPic"
         app:menu="@menu/menu_bottom_bar" />
 
 
