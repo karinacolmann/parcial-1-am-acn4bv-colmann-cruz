@@ -44,24 +44,10 @@ public class FreeDownloadActivity extends AppCompatActivity {
 
         });
 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
