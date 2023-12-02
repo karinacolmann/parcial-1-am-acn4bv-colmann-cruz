@@ -53,5 +53,7 @@
     <string name="login_button_text">Login</string>
     <string name="passwordTitle">Password:</string>
     <string name="holiday_sale_banner">HOLIDAY SALE BANNER</string>
+    <string name="bubblediscount">bubbleDiscount</string>
+    <string name="holidaybanner">holidaybanner</string>
 
 </resources>

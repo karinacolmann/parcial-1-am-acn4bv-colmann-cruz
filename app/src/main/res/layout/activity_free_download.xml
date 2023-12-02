@@ -120,7 +120,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
                 app:layout_constraintVertical_bias="0.58"
-                app:srcCompat="@drawable/sale_event_2" />
+                app:srcCompat="@drawable/sale_event_2"
+                android:contentDescription="@string/bubblediscount" />
 
             <ImageView
                 android:id="@+id/imageViewDownload"
@@ -137,7 +138,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
                 app:layout_constraintVertical_bias="0.666"
-                tools:srcCompat="@drawable/sale_event_2" />
+                tools:srcCompat="@drawable/sale_event_2"
+                android:contentDescription="@string/holidaybanner" />
 
             <Button
                 android:id="@+id/downloadButton"
