@@ -60,32 +60,32 @@ public class NewRelease extends AppCompatActivity {
                 gameRowContainers.add(gameRowContainer5);
                 gameRowContainers.add(gameRowContainer6);
 
-                // para agarrar los números aleatoriamente, necesito un num aleatorio
+
                 int numeroAleatorio = (int) (Math.random() * gameRowContainers.size());
                 LinearLayout selectedGameRowContainer = gameRowContainers.get(numeroAleatorio);
 
                 LinearLayout layoutCenterRowsContainer = findViewById(R.id.layoutCenterRowsContainer);
 
 
-                // Crea una copia del contenedor seleccionado
+
                 LinearLayout newContainer = new LinearLayout(button.getContext());
                 newContainer.setLayoutParams(selectedGameRowContainer.getLayoutParams());
                 newContainer.setOrientation(selectedGameRowContainer.getOrientation());
                 newContainer.setBackground(selectedGameRowContainer.getBackground());
 
-                // Crea una copia de la imagen y agrégala al nuevo contenedor
+
                 ImageView newImage = new ImageView(button.getContext());
                 newImage.setImageDrawable(((ImageView) selectedGameRowContainer.getChildAt(0)).getDrawable());
                 newImage.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
                 newContainer.addView(newImage);
 
-                // Crea una copia del texto y agrégala al nuevo contenedor
+
                 TextView newText = new TextView(button.getContext());
                 newText.setText(((TextView) selectedGameRowContainer.getChildAt(1)).getText());
                 newText.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
                 newContainer.addView(newText);
 
-                // Agrega el nuevo contenedor al diseño
+
                 layoutCenterRowsContainer.addView(newContainer);
 
                 CharSequence msg = "Estado actualizado";
