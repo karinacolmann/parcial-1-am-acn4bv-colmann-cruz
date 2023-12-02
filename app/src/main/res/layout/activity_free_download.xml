@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreeDownloadActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layoutBase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_search_color"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/layoutCenterDownload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="62dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:onClick="onBackButtonClick"
+            android:src="@drawable/round_arrow_back_ios_24"
+            android:contentDescription="@string/backbuttontomain"
+            android:focusable="true" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutCenterDownload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E1B067"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf ="@id/layoutBase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <FrameLayout
+                android:id="@+id/eventContainerNavidad"
+                android:layout_width="369dp"
+                android:layout_height="142dp"
+                android:layout_marginTop="-250dp"
+                android:background="#AF6262"
+                android:fontFamily="@font/alata"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageButton
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/christmas_event"
+                    android:scaleType="center"
+                    android:src="@drawable/navidad_event" />
+
+
+                <LinearLayout
+                    android:id="@+id/layoutTextBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/contentTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lilita_one"
+                        android:text="@string/christmas_event"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/subTextBoxes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/halloween_subtext"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="55dp"
+                app:layout_constraintBottom_toTopOf="@+id/downloadButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imageViewDownload"
+                app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/sale_event_2" />
+
+            <ImageView
+                android:id="@+id/imageViewDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="141dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="142dp"
+                android:layout_marginBottom="183dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.477"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@drawable/sale_event_2" />
+
+
+            <Button
+                android:id="@+id/downloadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="159dp"
+                android:layout_marginTop="59dp"
+                android:layout_marginEnd="161dp"
+                android:layout_marginBottom="75dp"
+                android:onClick="download"
+                android:text="@string/downloadButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDownload" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_vector_color"
+        app:itemIconTint="@drawable/vector_color"
+        app:itemTextColor="@drawable/vector_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCenterDownload"
+        app:menu="@menu/menu_bottom_bar" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
