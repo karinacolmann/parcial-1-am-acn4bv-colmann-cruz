@@ -50,7 +50,7 @@ public class FreeDownloadActivity extends AppCompatActivity {
     public void download(View v){
         ImageView imageView = findViewById(R.id.imageViewDownload);
         ImageDownload descarga = new ImageDownload (imageView);
-        descarga.execute("https://media.istockphoto.com/id/1435116123/es/vector/pegatina-de-venta-black-friday.jpg?s=612x612&w=0&k=20&c=XSdFLz6BAOm5qIxnRDUgr-SqNQ8F53oBkS5K3J21jnk=");
+        descarga.execute("https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAXVmXVRJNUvqVFvIZtUoTwWgY_7u7fhAxC_FCIO9cFFeh9LTwWQBkjo2P87BGgelRJkhu8fLaDexHd95ZQ14WLRKIiXg=w2126-h1830");
     }
 
 
