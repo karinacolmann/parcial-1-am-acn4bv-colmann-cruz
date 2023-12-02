@@ -46,7 +46,8 @@
     <string name="description_game5">description_game5_pic</string>
     <string name="description_game6">description_game6_pic</string>
 
-
+    //FREE DOWNLOAD//
+    <string name="downloadButton">Download</string>
 
     <string name="emailTitle">Email:</string>
     <string name="login_button_text">Login</string>
