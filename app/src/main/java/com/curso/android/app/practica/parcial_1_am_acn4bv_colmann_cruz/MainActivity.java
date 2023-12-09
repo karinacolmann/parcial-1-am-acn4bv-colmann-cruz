@@ -33,17 +33,15 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 
-        SearchView searchBar=findViewById(R.id.searchBar);
+        SearchView searchBar = findViewById(R.id.searchBar);
         searchBar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView contentText =findViewById(R.id.textViewBox);
+                TextView contentText = findViewById(R.id.textViewBox);
                 contentText.setVisibility(View.VISIBLE);
                 contentText.setText(R.string.textViewContentSecondTOnClick);
             }
         });
-
-
 
 
         //evento ReleaseLayout
@@ -71,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });//fin
 
+
         //evento freeDownloadLayout
         freeDownloadLayout = findViewById(R.id.freeDownloadLayout);
         android.widget.TextView freeDownloadTitle = findViewById(R.id.freeDownloadTitle);
@@ -92,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 //Intent que conduce al Activity 'Free Download'
                 Intent intent = new Intent(MainActivity.this, FreeDownloadActivity.class);
                 startActivity(intent);
-
 
 
             }
@@ -172,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "¡Unite a la Comunidad!", Toast.LENGTH_SHORT).show();
 
 
-
                 communityLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -184,7 +181,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
     }
 
     @Override
@@ -192,16 +188,22 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            Log.i ("firebase", "El usuario existe. Accediste a la pantalla principal.");
 
-        } else{
-            Intent intent = new Intent (getApplicationContext(), LoginActivity.class);
-            startActivity (intent);
-            Log.i ("firebase", "deberia logearme porque no hay usuario");
-
+        if (currentUser !=null) {
+        if (currentUser.isEmailVerified()) {
+            Log.i("firebase", "El usuario existe. Accediste a la pantalla principal.");
+        } else {
+            currentUser.sendEmailVerification();
         }
-    }
+
+    } else {
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(intent);
+        Log.i("firebase", "Deberia loguearme porque no hay usuario");
+
+    }}
+
+
 
     //Para Cerrar sesion
 
