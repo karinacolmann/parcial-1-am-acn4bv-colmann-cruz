@@ -4,78 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FreeDownload">
+    tools:context=".FreeDownloadActivity">
+
 
     <LinearLayout
         android:id="@+id/layoutBase"
-        android:layout_width="411dp"
-        android:layout_height="73dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/bg_search_color"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@id/textViewBox"
+        app:layout_constraintBottom_toTopOf="@id/layoutCenterDownload"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <SearchView
-            android:id="@+id/searchBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="62dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
-            android:background="@color/search_color"
-            android:queryHint="Search"
-            tools:layout_marginBottom="15dp" />
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:onClick="onBackButtonClick"
+            android:src="@drawable/round_arrow_back_ios_24"
+            android:contentDescription="@string/backbuttontomain"
+            android:focusable="true" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/hidden_text"
-        android:text="@string/textViewContent"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/layoutCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutBase" />
 
     <LinearLayout
-        android:id="@+id/layoutCenter"
+        android:id="@+id/layoutCenterDownload"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/bg_layoutCenter"
+        android:background="#E1B067"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintTop_toBottomOf ="@id/layoutBase"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBox">
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
 
             <FrameLayout
-                android:id="@+id/content"
+                android:id="@+id/eventContainerNavidad"
                 android:layout_width="369dp"
                 android:layout_height="142dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginTop="-250dp"
+                android:background="#AF6262"
+                android:fontFamily="@font/alata"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
 
                 <ImageButton
                     android:id="@+id/imageView2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/halloween_title"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/halloween" />
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/christmas_event"
+                    android:scaleType="center"
+                    android:src="@drawable/navidad_event" />
 
 
                 <LinearLayout
@@ -90,7 +89,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lilita_one"
-                        android:text="@string/halloween_title"
+                        android:text="@string/christmas_event"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="#FFFFFF"
@@ -106,7 +105,54 @@
 
                 </LinearLayout>
 
+
             </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="55dp"
+                app:layout_constraintBottom_toTopOf="@+id/downloadButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imageViewDownload"
+                app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/sale_event_2" />
+
+            <ImageView
+                android:id="@+id/imageViewDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="141dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="142dp"
+                android:layout_marginBottom="183dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.477"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
+                app:layout_constraintVertical_bias="0.0"
+                tools:srcCompat="@drawable/sale_event_2" />
+
+
+            <Button
+                android:id="@+id/downloadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="159dp"
+                android:layout_marginTop="59dp"
+                android:layout_marginEnd="161dp"
+                android:layout_marginBottom="75dp"
+                android:onClick="download"
+                android:text="@string/downloadButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDownload" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -125,6 +171,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutCenter"
+        app:layout_constraintTop_toBottomOf="@id/layoutCenterDownload"
         app:menu="@menu/menu_bottom_bar" />
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

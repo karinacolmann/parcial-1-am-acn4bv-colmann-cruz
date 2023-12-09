@@ -4,9 +4,7 @@
     <solid
         android:color="#EFECEC" />
 
-    <corners
-        android:topLeftRadius ="32dp"
-        android:topRightRadius ="32dp" />
+
 
 
 </shape>

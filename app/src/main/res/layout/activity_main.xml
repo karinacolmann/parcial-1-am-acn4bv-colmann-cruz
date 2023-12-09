@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--Search-->
+
     <LinearLayout
         android:id="@+id/layoutBase"
-        android:layout_width="411dp"
-        android:layout_height="73dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/bg_search_color"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@id/textViewBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,9 +22,10 @@
             android:id="@+id/searchBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
             android:background="@color/search_color"
             android:queryHint="Search"
             tools:layout_marginBottom="15dp" />
@@ -43,7 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutBase" />
 
-    <!--Back-->
     <LinearLayout
         android:id="@+id/layoutCenter"
         android:layout_width="0dp"
@@ -115,18 +114,13 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="3dp"
-
-                    >
+                    app:cardElevation="3dp">
 
                     <RelativeLayout
                         android:id="@+id/freeDownloadLayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/bg_row_box"
-                        android:clickable="true"
-                        android:onClick="FreeDownload"
-                        >
+                        android:background="@color/bg_row_box">
 
                         <TextView
                             android:id="@+id/freeDownloadTitle"
@@ -328,25 +322,20 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <FrameLayout
-                android:id="@+id/content"
-                android:layout_width="369dp"
-                android:layout_height="70dp"
-                android:layout_marginBottom="24dp"
-                android:orientation="vertical"
+            <Button
+                android:id="@+id/buttonCerrarSesion"
+                android:layout_width="180dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="#8A5D5D"
+                android:onClick="logout"
+                android:text="@string/cerrarSesionButtonText"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/row3">
-
-                <Button
-                    android:id="@+id/buttonProvisorio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button"
-                    android:layout_gravity="center"/>
-
-            </FrameLayout>
+                app:layout_constraintTop_toBottomOf="@+id/row3"
+                app:layout_constraintVertical_bias="0.228" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -354,7 +343,6 @@
 
     </LinearLayout>
 
-    <!--Nav-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
