@@ -115,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
                         topSellersTitle.setTextColor(getResources().getColor(R.color.black));
                     }
                 }, 1000);
+
+
             }
         });//fin
 
@@ -135,6 +137,10 @@ public class MainActivity extends AppCompatActivity {
                         mostPlayedTitle.setTextColor(getResources().getColor(R.color.black));
                     }
                 }, 1000);
+
+                //Intent que conduce al Activity 'MostPlayed'
+                Intent intent = new Intent(MainActivity.this, MostPlayed.class);
+                startActivity(intent);
             }
         });//fin
 
