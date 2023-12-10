@@ -78,7 +78,7 @@ public class NewRelease extends AppCompatActivity {
         gameRowContainer.setLayoutParams(new LinearLayout.LayoutParams(
 
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                150 // Altura del gameRow
+                200 // Altura del gameRow
 
         ));
 
