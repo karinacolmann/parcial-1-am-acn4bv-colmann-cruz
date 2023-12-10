@@ -10,6 +10,18 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
+
+    <TextView
+        android:id="@+id/textRegisterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailPasswordContainer"
         android:layout_width="match_parent"
