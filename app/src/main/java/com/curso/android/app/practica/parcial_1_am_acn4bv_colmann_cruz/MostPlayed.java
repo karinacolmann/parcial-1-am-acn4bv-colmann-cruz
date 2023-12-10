@@ -32,14 +32,16 @@ public class MostPlayed extends AppCompatActivity {
         try {*/
     private void mostrarInformacionEnUI(JSONArray juegosArray) {
         try {
-            JSONObject primerJuego = juegosArray.getJSONObject(0);
+            for (int i = 0; i < juegosArray.length(); i++) {
+                JSONObject juego = juegosArray.getJSONObject(i);
+            /*JSONObject primerJuego = juegosArray.getJSONObject(0);*/
 
             // Extrae información específica del objeto JSON
-            String nombreJuego = primerJuego.getString("nombre");
-            String plataforma = primerJuego.getString("plataforma");
-            int añoLanzamiento = primerJuego.getInt("añoLanzamiento");
-            String genero = primerJuego.getString("genero");
-            String desarrollador = primerJuego.getString("desarrollador");
+            String nombreJuego = juego.getString("nombre");
+            String plataforma = juego.getString("plataforma");
+            int añoLanzamiento = juego.getInt("añoLanzamiento");
+            String genero = juego.getString("genero");
+            String desarrollador = juego.getString("desarrollador");
 
             // Actualiza tu interfaz de usuario con la información
             TextView textViewNombre = findViewById(R.id.textViewNombre);
@@ -53,8 +55,16 @@ public class MostPlayed extends AppCompatActivity {
             textViewAñoLanzamiento.setText("Año de Lanzamiento: " + añoLanzamiento);
             textViewGenero.setText("Género: " + genero);
             textViewDesarrollador.setText("Desarrollador: " + desarrollador);
+
+            String informacionJuego = String.format(
+              "Nombre: %s\nPlataforma: %s\nAño de Lanzamiento: %d\nGénero: %s\nDesarrollador: %s\n\n",
+               nombreJuego, plataforma, añoLanzamiento, genero, desarrollador);
+
+                // Agrega la información al TextView
+                textViewNombre.append(informacionJuego);
+            }
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.e("MostPlayed", "Error al analizar JSON: " + e.getMessage());
         }
     }
 
@@ -90,18 +100,6 @@ public class MostPlayed extends AppCompatActivity {
             }
             return response;
         }
-       /* @Override
-        protected String doInBackground(String... strings) {
-            String url = strings[0];
-            String response = "";
-            try {
-                response = run(url);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            return response;
-        }*/
-
 
         @Override
         protected void onPostExecute(String s) {
@@ -115,17 +113,5 @@ public class MostPlayed extends AppCompatActivity {
             }
         }
 
-        /*@Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-            // Procesa la respuesta JSON
-            try {
-                JSONObject juego = new JSONObject(s);
-                mostPlayed.mostrarInformacionEnUI(juego);
-            } catch (JSONException e) {
-                Log.e("GetBubbleApi", "Error al analizar JSON: " + e.getMessage());
-                e.printStackTrace();
-            }
-        }*/
     }
 }

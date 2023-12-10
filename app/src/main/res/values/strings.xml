@@ -53,4 +53,11 @@
     <string name="login_button_text">Login</string>
     <string name="passwordTitle">Password:</string>
 
+    //MOST PLAYED//
+    <string name="textViewNombre">Nombre:</string>
+    <string name="textViewPlataforma">Plataforma:</string>
+    <string name="textViewAñoLanzamiento">Año de Lanzamiento:</string>
+    <string name="textViewGenero">Genero:</string>
+    <string name="textViewDesarrollador">Desarrollador:</string>
+
 </resources>
