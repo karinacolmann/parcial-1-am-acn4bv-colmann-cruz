@@ -9,15 +9,30 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
+
+    private User user;
+
+
     RelativeLayout newReleaseLayout;
     RelativeLayout freeDownloadLayout;
     RelativeLayout topSellersLayout;
@@ -31,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
 
 
         SearchView searchBar = findViewById(R.id.searchBar);
@@ -188,8 +204,81 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
-
         if (currentUser !=null) {
+
+            String uid = currentUser.getUid();
+            db      .collection("users")
+                    .get()
+
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                         if (task.isSuccessful()){
+                             for (QueryDocumentSnapshot documento: task.getResult()){
+                                 String id = documento.getId();
+                                 Map<String, Object> data = documento.getData();
+
+                                 user = documento.toObject(User.class);
+
+                                 Log.i ("firebase firestore", "Apellido: " + user.getLastname());
+                                 Log.i ("firebase firestore", "Nombre: " + user.getName());
+                                 Log.i ("firebase firestore", "Cuenta Verificada: " + user.isVerified());
+
+
+                                 String currentLastName = (String) data.get ("lastname");
+                                 String currentName = (String) data.get ("name");
+                                 boolean currentVerified = (boolean) data.get("verified");
+                                 String updatedLastName = "";
+                                 String updatedName = "";
+                                 boolean updatedVerified = currentVerified;
+
+                                 if ("cRuZ". equalsIgnoreCase(currentLastName)){
+                                     updatedLastName = "Cruz";
+                                     updatedName = "Eliana";
+                                     if (currentVerified) {
+                                         updatedVerified = false;
+                                     }else{
+                                         updatedVerified = true;
+                                     }
+
+                                 } else if ("COLMANn". equalsIgnoreCase(currentLastName)){
+                                     updatedLastName = "Colmann";
+                                     updatedName = "Karina";
+
+                                     if (currentVerified){
+                                         updatedVerified = false;
+                                     }else{
+                                         updatedVerified = true;
+                                     }
+                                 }
+
+
+                                 db.collection("users")
+                                         .document(id)
+                                         .update("lastname", updatedLastName, "name", updatedName, "verified", updatedVerified)
+
+                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                             @Override
+                                             public void onSuccess(Void aVoid) {
+
+                                                 Log.i("firebase firestore", "Los datos del usuario se actualizaron con éxito: " + id);
+
+                                             }
+                                         })
+                                         .addOnFailureListener(new OnFailureListener() {
+                                             @Override
+                                             public void onFailure(@NonNull Exception e) {
+                                                 Log.e ("firebase firestore", "Error al actualizar el usuario: " + id, e);
+                                             }
+                                         });
+
+                             }
+                         }
+
+                        }
+                    });
+
+            //Verificacion de Email
         if (currentUser.isEmailVerified()) {
             Log.i("firebase", "El usuario existe. Accediste a la pantalla principal.");
         } else {
