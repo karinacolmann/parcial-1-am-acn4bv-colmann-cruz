@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
+    TextView textView;
+    ProgressBar progressBar;
+
+
     public void login(String email, String password) {
 
         Log.i("firebase", "email:" + email);
@@ -30,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
+                            progressBar.setVisibility(View.GONE);
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class );
                             startActivity (intent);
 
@@ -43,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
+
     public void onLoginButtonClick (View view) {
 
         EditText emailInput = findViewById(R.id.emailBox);
@@ -52,6 +60,8 @@ public class LoginActivity extends AppCompatActivity {
         String password = passInput.getText().toString();
 
         this.login( email, password);
+
+        progressBar.setVisibility(View.VISIBLE);
     }
 
 
@@ -62,13 +72,21 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
+        textView = findViewById(R.id.loginToRegisterBottomMessage);
+        progressBar = findViewById(R.id.loginProgressBar);
+
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity (intent);
+                finish ();
+
+            }
+        });
     }
 
-    public void onLoginToCreateAccountRegisterClick(View view) {
 
-        Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
-        startActivity(intent);
-    }
 
 
 
