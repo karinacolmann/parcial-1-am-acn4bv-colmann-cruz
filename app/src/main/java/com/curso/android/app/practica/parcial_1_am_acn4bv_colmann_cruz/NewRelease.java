@@ -2,6 +2,7 @@ package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -27,7 +28,12 @@ public class NewRelease extends AppCompatActivity {
 
         Button contentButton = new Button(this);
         contentButton.setText(R.string.contentButtonText);
-        contentButton.setBackgroundColor(+R.color.crimson);
+        contentButton.setTextColor(Color.parseColor("#FFFFFF"));
+
+        GradientDrawable background = new GradientDrawable();
+        background.setColor(getResources().getColor(R.color.scrollview_button));
+        background.setCornerRadius(100f);
+        contentButton.setBackgroundDrawable(background);
 
         LinearLayout layoutCenterArrayPic = findViewById(R.id.layoutCenterArrayPic);
         layoutCenterArrayPic.addView(contentButton);
