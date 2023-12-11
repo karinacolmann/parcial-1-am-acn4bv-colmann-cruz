@@ -45,6 +45,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutBase">
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/most_played" />
+
         <ScrollView
             android:id="@+id/scrollBase"
             android:layout_width="match_parent"
@@ -57,10 +63,11 @@
             <LinearLayout
                 android:id="@+id/layoutCenterRowsContainer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
              <!--FIN del unico layout hijo del scroll-->
+
 
                     <LinearLayout
                         android:id="@+id/layoutCenterRowsContainer1"
@@ -69,32 +76,47 @@
                         android:layout_marginTop="10dp"
                         android:orientation="vertical">
 
+                        <TextView
+                            android:id="@+id/textViewPuesto1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lilita_one"
+                            android:text="@string/textViewPuesto1"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:textAlignment="center"/>
+
                             <TextView
                                 android:id="@+id/textViewNombre1"
+                                android:fontFamily="@font/alata"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/textViewNombre" />
 
                             <TextView
                                 android:id="@+id/textViewPlataforma1"
+                                android:fontFamily="@font/alata"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/textViewPlataforma" />
 
                             <TextView
                                 android:id="@+id/textViewAñoLanzamiento1"
+                                android:fontFamily="@font/alata"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/textViewAñoLanzamiento" />
 
                             <TextView
                                 android:id="@+id/textViewGenero1"
+                                android:fontFamily="@font/alata"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/textViewGenero" />
 
                             <TextView
                                 android:id="@+id/textViewDesarrollador1"
+                                android:fontFamily="@font/alata"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/textViewDesarrollador" />
@@ -107,33 +129,46 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:orientation="vertical">
-
+                        <TextView
+                            android:id="@+id/textViewPuesto2"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto2" />
                         <TextView
                             android:id="@+id/textViewNombre2"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewNombre" />
 
                         <TextView
                             android:id="@+id/textViewPlataforma2"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewPlataforma" />
 
                         <TextView
                             android:id="@+id/textViewAñoLanzamiento2"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewAñoLanzamiento" />
 
                         <TextView
                             android:id="@+id/textViewGenero2"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewGenero" />
 
                         <TextView
                             android:id="@+id/textViewDesarrollador2"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewDesarrollador" />
@@ -146,33 +181,46 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:orientation="vertical">
-
+                        <TextView
+                            android:id="@+id/textViewPuesto3"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto3" />
                         <TextView
                             android:id="@+id/textViewNombre3"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewNombre" />
 
                         <TextView
                             android:id="@+id/textViewPlataforma3"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewPlataforma" />
 
                         <TextView
                             android:id="@+id/textViewAñoLanzamiento3"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewAñoLanzamiento" />
 
                         <TextView
                             android:id="@+id/textViewGenero3"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewGenero" />
 
                         <TextView
                             android:id="@+id/textViewDesarrollador3"
+                            android:fontFamily="@font/alata"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/textViewDesarrollador" />
@@ -185,33 +233,46 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
-
+                        <TextView
+                            android:id="@+id/textViewPuesto4"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto4" />
                 <TextView
                     android:id="@+id/textViewNombre4"
+                    android:fontFamily="@font/alata"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewNombre" />
 
                 <TextView
                     android:id="@+id/textViewPlataforma4"
+                    android:fontFamily="@font/alata"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewPlataforma" />
 
                 <TextView
                     android:id="@+id/textViewAñoLanzamiento4"
+                    android:fontFamily="@font/alata"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewAñoLanzamiento" />
 
                 <TextView
                     android:id="@+id/textViewGenero4"
+                    android:fontFamily="@font/alata"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewGenero" />
 
                 <TextView
                     android:id="@+id/textViewDesarrollador4"
+                    android:fontFamily="@font/alata"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/textViewDesarrollador" />
@@ -224,33 +285,46 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="vertical">
-
+                        <TextView
+                            android:id="@+id/textViewPuesto5"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto5" />
                     <TextView
                         android:id="@+id/textViewNombre5"
+                        android:fontFamily="@font/alata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/textViewNombre" />
 
                     <TextView
                         android:id="@+id/textViewPlataforma5"
+                        android:fontFamily="@font/alata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/textViewPlataforma" />
 
                     <TextView
                         android:id="@+id/textViewAñoLanzamiento5"
+                        android:fontFamily="@font/alata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/textViewAñoLanzamiento" />
 
                     <TextView
                         android:id="@+id/textViewGenero5"
+                        android:fontFamily="@font/alata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/textViewGenero" />
 
                     <TextView
                         android:id="@+id/textViewDesarrollador5"
+                        android:fontFamily="@font/alata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/textViewDesarrollador" />
