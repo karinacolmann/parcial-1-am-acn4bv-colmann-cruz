@@ -19,9 +19,6 @@
             android:name=".MostPlayed"
             android:exported="false" />
         <activity
-            android:name=".API.APIJuegos"
-            android:exported="false" />
-        <activity
             android:name=".FreeDownloadActivity"
             android:exported="false" />
         <activity
