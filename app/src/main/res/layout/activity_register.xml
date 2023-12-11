@@ -8,7 +8,7 @@
     android:gravity="center"
     android:background="#EC2E2E"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
 
     <TextView
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:text="@string/loginTitleText"
+        android:text="REGISTER"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
 
@@ -33,6 +33,7 @@
         android:background="#FFBEBE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
 
         <EditText
             android:id="@+id/emailBox"
@@ -66,36 +67,37 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ProgressBar
-        android:id ="@+id/loginProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"/>
 
+        <ProgressBar
+            android:id ="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:onClick="onLoginButtonClick"
-        android:text="@string/login_button_text"
+        android:onClick="onRegisterButtonClick"
+        android:text="@string/registerButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"/>
 
+
     <TextView
-        android:id="@+id/loginToRegisterBottomMessage"
+        android:id="@+id/registerTologinBottomMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="@string/create_an_account_registerText"
+        android:text="@string/already_have_an_accountText"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
-        android:onClick="onLoginToCreateAccountRegisterClick"
-        android:clickable="true"
         />
+
+
 
 
 </LinearLayout>

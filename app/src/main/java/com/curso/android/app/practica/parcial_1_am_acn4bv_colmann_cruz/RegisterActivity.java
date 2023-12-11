@@ -17,32 +17,32 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-
     TextView textView;
     ProgressBar progressBar;
 
 
-    public void login(String email, String password) {
+    public void register (String email, String password) {
 
         Log.i("firebase", "email:" + email);
         Log.i("firebase", "password: " + password);
 
-        mAuth.signInWithEmailAndPassword(email, password)
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
                             progressBar.setVisibility(View.GONE);
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class );
-                            startActivity (intent);
+                            Toast.makeText(RegisterActivity.this, " Te cuenta ha sido creada ",
+                                    Toast.LENGTH_SHORT).show();
 
                         } else {
-                            Toast.makeText(LoginActivity.this, " Falló el login ",
+                            Toast.makeText(RegisterActivity.this, " Falló el Registro ",
                                     Toast.LENGTH_SHORT).show();
+                            Log.e("Firebase", "Error al crear cuenta: " + task.getException().getMessage());
 
                         }
                     }
@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    public void onLoginButtonClick (View view) {
+    public void onRegisterButtonClick (View view) {
 
         EditText emailInput = findViewById(R.id.emailBox);
         EditText passInput = findViewById(R.id.passwordBox);
@@ -59,33 +59,30 @@ public class LoginActivity extends AppCompatActivity {
         String email = emailInput.getText(). toString();
         String password = passInput.getText().toString();
 
-        this.login( email, password);
+        this.register( email, password);
 
         progressBar.setVisibility(View.VISIBLE);
     }
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
-        textView = findViewById(R.id.loginToRegisterBottomMessage);
-        progressBar = findViewById(R.id.loginProgressBar);
+        textView =findViewById(R.id.registerTologinBottomMessage);
+        progressBar = findViewById(R.id.progressBar);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity (intent);
                 finish ();
 
             }
         });
     }
-
 
 
 

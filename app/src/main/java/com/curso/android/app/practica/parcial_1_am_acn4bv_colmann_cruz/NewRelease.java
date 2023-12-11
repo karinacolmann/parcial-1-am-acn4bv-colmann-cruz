@@ -1,9 +1,10 @@
 package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -13,9 +14,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class NewRelease extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,76 +47,74 @@ public class NewRelease extends AppCompatActivity {
 
             @Override
             public void onClick(View button) {
-                LinearLayout gameRowContainer1 = findViewById(R.id.gameRowContainer1);
-                LinearLayout gameRowContainer2 = findViewById(R.id.gameRowContainer2);
-                LinearLayout gameRowContainer3 = findViewById(R.id.gameRowContainer3);
-                LinearLayout gameRowContainer4 = findViewById(R.id.gameRowContainer4);
-                LinearLayout gameRowContainer5 = findViewById(R.id.gameRowContainer5);
-                LinearLayout gameRowContainer6 = findViewById(R.id.gameRowContainer6);
-
-                List<LinearLayout> gameRowContainers = new ArrayList<>();
-                gameRowContainers.add(gameRowContainer1);
-                gameRowContainers.add(gameRowContainer2);
-                gameRowContainers.add(gameRowContainer3);
-                gameRowContainers.add(gameRowContainer4);
-                gameRowContainers.add(gameRowContainer5);
-                gameRowContainers.add(gameRowContainer6);
-
-                // para agarrar los números aleatoriamente, necesito un num aleatorio
-                int numeroAleatorio = (int) (Math.random() * gameRowContainers.size());
-                LinearLayout selectedGameRowContainer = gameRowContainers.get(numeroAleatorio);
-
-                LinearLayout layoutCenterRowsContainer = findViewById(R.id.layoutCenterRowsContainer);
+                ArrayList<Juegos> listaDeJuegos = new ArrayList<Juegos>();
+                listaDeJuegos.add(new Juegos("Counter Strike", R.drawable.coustrike));
+                listaDeJuegos.add(new Juegos("Call of Duty", R.drawable.callofduty));
+                listaDeJuegos.add(new Juegos("Destiny 2", R.drawable.destinty_dos));
+                listaDeJuegos.add(new Juegos("EA FC 24", R.drawable.eafc));
+                listaDeJuegos.add(new Juegos("Grand Theft Auto V", R.drawable.grandtheftauto_cinco));
+                listaDeJuegos.add(new Juegos("PUBG Battlegrounds", R.drawable.battle));
 
 
-                // Crea una copia del contenedor seleccionado
-                LinearLayout newContainer = new LinearLayout(button.getContext());
-                newContainer.setLayoutParams(selectedGameRowContainer.getLayoutParams());
-                newContainer.setOrientation(selectedGameRowContainer.getOrientation());
-                newContainer.setBackground(selectedGameRowContainer.getBackground());
 
-                // Crea una copia de la imagen y agrégala al nuevo contenedor
-                ImageView newImage = new ImageView(button.getContext());
-                newImage.setImageDrawable(((ImageView) selectedGameRowContainer.getChildAt(0)).getDrawable());
-                newImage.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
-                newContainer.addView(newImage);
-
-                // Crea una copia del texto y agrégala al nuevo contenedor
-                TextView newText = new TextView(button.getContext());
-                newText.setText(((TextView) selectedGameRowContainer.getChildAt(1)).getText());
-                newText.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
-                newContainer.addView(newText);
-
-                // Agrega el nuevo contenedor al diseño
-                layoutCenterRowsContainer.addView(newContainer);
+                int numeroAleatorio = (int) (Math.random() * listaDeJuegos.size());
 
                 CharSequence msg = "Estado actualizado";
                 Toast toast = Toast.makeText(contentButton.getContext(), msg, Toast.LENGTH_SHORT);
                 toast.show();
 
-
+                addGameRowIntoContainer(listaDeJuegos.get(numeroAleatorio),button.getContext());
 
             }
         });
 
+    }
+
+    public void addGameRowIntoContainer(Juegos game, Context context){
+
+
+
+        LinearLayout gameRowContainer = new LinearLayout(context);
+        gameRowContainer.setLayoutParams(new LinearLayout.LayoutParams(
+
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                200 // Altura del gameRow
+
+        ));
+
+        gameRowContainer.setOrientation(LinearLayout.HORIZONTAL);
+        gameRowContainer.setBackgroundColor(Color.WHITE);
+
+
+        ImageView imageView = new ImageView(context);
+        imageView.setLayoutParams(new LinearLayout.LayoutParams(
+                0,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                1
+        ));
+        imageView.setImageResource(game.getImg());
+
+
+        TextView textView = new TextView(context);
+        textView.setLayoutParams(new LinearLayout.LayoutParams(
+                0,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                1
+        ));
+        textView.setText(game.getTitulo());
+
+
+        gameRowContainer.addView(imageView);
+        gameRowContainer.addView(textView);
+
+
+        LinearLayout appContent = findViewById(R.id.layoutCenterRowsContainer);
+        appContent.addView(gameRowContainer);
     }
     public void onBackPressed() {
         super.onBackPressed();
         finish();
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+

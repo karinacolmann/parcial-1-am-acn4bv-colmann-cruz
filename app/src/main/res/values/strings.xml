@@ -3,6 +3,21 @@
     <string name="textViewContent">Este es un texto oculto</string>
     <string name="textViewContentSecondTOnClick">Haz hecho click en el buscador</string>
 
+
+    //LOGIN ACTIVITY //
+    <string name="loginTitleText">LOGIN</string>
+    <string name="emailTitle">Email:</string>
+    <string name="passwordTitle">Password:</string>
+    <string name="login_button_text">Login</string>
+
+    <string name="create_an_account_registerText">Create an account. Register</string>
+
+    //REGISTER ACTIVITY//
+    <string name="registerButtonText">Register</string>
+    <string name="already_have_an_accountText">Already have an account? Login</string>
+
+
+    //MAIN ACTIVITY //
     <string name="bar_home">Home</string>
     <string name="bar_collection">Collection</string>
     <string name="bar_wishlist">Wishlist</string>
@@ -15,8 +30,8 @@
     <string name="saleEventsText">Sale Events</string>
     <string name="communityText">Community</string>
 
-    <string name="christmas_event">Christmas Discount Event</string>
-    <string name="halloween_subtext">Open the boxes and find amazing prizes!</string>
+    <string name="cerrarSesionButtonText">Cerrar Sesion</string>
+
     <string name="description_community_pic">community picture</string>
     <string name="description_mostplayed">description_mostplayed_pic</string>
     <string name="description_freedownload">description_freedownload_pic</string>
@@ -24,11 +39,11 @@
     <string name="description_topseller">description_topseller</string>
     <string name="description_saleevent">description_saleevent</string>
 
-
-    //NEW RELEASES //
+    //BACK BUTTON //
     <string name="backbuttontomain">backButtonToMain</string>
 
 
+    //NEW RELEASES //
     <string name="textViewGame1Title">COUNTER STRIKE 2</string>
     <string name="textViewGame2Title">GTA 5</string>
     <string name="textViewGame3Title">EA SPORTS FC™ 24</string>
@@ -37,7 +52,7 @@
     <string name="textViewGame6Title">PUBG: BATTLEGROUNDS</string>
 
     <string name="contentButtonText">Actualizar</string>
-    <string name="cerrarSesionButtonText">Cerrar Sesion</string>
+
 
     <string name="description_game1">description_game1_pic</string>
     <string name="description_game2">description_game2_pic</string>
@@ -46,12 +61,19 @@
     <string name="description_game5">description_game5_pic</string>
     <string name="description_game6">description_game6_pic</string>
 
+
     //FREE DOWNLOAD//
+    <string name="christmas_eventTextTitle">Christmas Discount Event</string>
+    <string name="halloween_subtext">Open the boxes and find amazing prizes!</string>
+    <string name="holiday_sale_banner">HOLIDAY SALE BANNER</string>
     <string name="downloadButton">¡Sorpresa!</string>
 
-    <string name="emailTitle">Email:</string>
-    <string name="login_button_text">Login</string>
-    <string name="passwordTitle">Password:</string>
+
+
+    <string name="bubblediscount">bubbleDiscount</string>
+    <string name="holidaybanner">holidaybanner</string>
+
+
 
     //MOST PLAYED//
     <string name="most_played_titulo">Most Played!</string>
