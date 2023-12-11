@@ -66,8 +66,11 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-
+    <ProgressBar
+        android:id ="@+id/loginProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
 
     <Button
@@ -80,6 +83,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/loginToRegisterBottomMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/create_an_account_registerText"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:onClick="onLoginToCreateAccountRegisterClick"
+        android:clickable="true"
+        />
 
 
 </LinearLayout>
