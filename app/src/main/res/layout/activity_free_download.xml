@@ -54,6 +54,19 @@
             android:layout_height="match_parent"
             android:background="#FFFFFF">
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="December Events"
+                android:textColor="#938989"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/eventContainerNavidad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <FrameLayout
                 android:id="@+id/eventContainerNavidad"
                 android:layout_width="369dp"
@@ -62,7 +75,7 @@
                 android:background="#AF6262"
                 android:fontFamily="@font/alata"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -97,8 +110,10 @@
 
                     <TextView
                         android:id="@+id/subTextBoxes"
+                        android:layout_marginTop="8dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="15dp"
                         android:text="@string/halloween_subtext"
                         android:textAlignment="center"
                         android:textColor="#FFFFFF" />
@@ -124,7 +139,6 @@
                 android:id="@+id/imageViewDownload"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
@@ -132,19 +146,17 @@
 
             <Button
                 android:id="@+id/downloadButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="159dp"
-                android:layout_marginTop="59dp"
-                android:layout_marginEnd="161dp"
-                android:layout_marginBottom="75dp"
+                android:layout_width="177dp"
+                android:layout_height="50dp"
                 android:onClick="download"
                 android:text="@string/downloadButton"
+                android:textColor="#39B2FD"
+                android:background="@drawable/background_surprise_button"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewDownload" />
-
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDownload"
+                app:layout_constraintVertical_bias="0.504" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
