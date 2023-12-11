@@ -30,7 +30,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#FFBEBE"
+        android:background="#D9D9D9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -38,11 +38,12 @@
             android:id="@+id/emailBox"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:autofillHints=""
             android:background="#FFFFFF"
             android:ems="10"
             android:hint="@string/emailTitle"
             android:inputType="textEmailAddress"
-            android:autofillHints="" />
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -51,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="#FFBEBE">
+        android:background="#D9D9D9">
 
         <EditText
             android:id="@+id/passwordBox"
@@ -80,6 +81,7 @@
         android:layout_marginTop="48dp"
         android:onClick="onLoginButtonClick"
         android:text="@string/login_button_text"
+        android:background="@drawable/background_loginregister_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"/>
