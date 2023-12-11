@@ -75,4 +75,19 @@
 
 
 
+    //MOST PLAYED//
+    <string name="most_played_titulo">Most Played!</string>
+
+    <string name="textViewNombre">Nombre: </string>
+    <string name="textViewPlataforma">Plataforma: </string>
+    <string name="textViewAñoLanzamiento">Año de Lanzamiento: </string>
+    <string name="textViewGenero">Genero: </string>
+    <string name="textViewDesarrollador">Desarrollador: </string>
+
+    <string name="textViewPuesto1">PUESTO #1</string>
+    <string name="textViewPuesto2">PUESTO #2</string>
+    <string name="textViewPuesto3">PUESTO #3</string>
+    <string name="textViewPuesto4">PUESTO #4</string>
+    <string name="textViewPuesto5">PUESTO #5</string>
+
 </resources>

@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+
         //evento ReleaseLayout
         newReleaseLayout = findViewById(R.id.newReleaseLayout);
         android.widget.TextView newReleaseTitle = findViewById(R.id.newReleaseTitle);
@@ -109,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
 
+
             }
         });//fin
 
@@ -149,6 +152,10 @@ public class MainActivity extends AppCompatActivity {
                         mostPlayedTitle.setTextColor(getResources().getColor(R.color.black));
                     }
                 }, 1000);
+
+                //Intent que conduce al Activity 'MostPlayed'
+                Intent intent = new Intent(MainActivity.this, MostPlayed.class);
+                startActivity(intent);
             }
         });//fin
 
@@ -186,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "¡Unite a la Comunidad!", Toast.LENGTH_SHORT).show();
 
 
+
                 communityLayout.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -195,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 1000);
             }
         });
+
 
 
     }
