@@ -32,41 +32,49 @@ public class MostPlayed extends AppCompatActivity {
         try {*/
     private void mostrarInformacionEnUI(JSONArray juegosArray) {
         try {
-            for (int i = 0; i < juegosArray.length(); i++) {
+            //los primeros 5 juegos en el array
+            int numJuegosAMostrar = Math.min(5, juegosArray.length());
+            for (int i = 0; i < numJuegosAMostrar; i++) {
                 JSONObject juego = juegosArray.getJSONObject(i);
-            /*JSONObject primerJuego = juegosArray.getJSONObject(0);*/
 
-            // Extrae información específica del objeto JSON
-            String nombreJuego = juego.getString("nombre");
-            String plataforma = juego.getString("plataforma");
-            int añoLanzamiento = juego.getInt("añoLanzamiento");
-            String genero = juego.getString("genero");
-            String desarrollador = juego.getString("desarrollador");
+                // Extrae información específica de cada juego
+                String nombreJuego = juego.getString("nombre");
+                String plataforma = juego.getString("plataforma");
+                int añoLanzamiento = juego.getInt("añoLanzamiento");
+                String genero = juego.getString("genero");
+                String desarrollador = juego.getString("desarrollador");
 
-            // Actualiza tu interfaz de usuario con la información
-            TextView textViewNombre = findViewById(R.id.textViewNombre);
-            TextView textViewPlataforma = findViewById(R.id.textViewPlataforma);
-            TextView textViewAñoLanzamiento = findViewById(R.id.textViewAñoLanzamiento);
-            TextView textViewGenero = findViewById(R.id.textViewGenero);
-            TextView textViewDesarrollador = findViewById(R.id.textViewDesarrollador);
+                // Crea identificadores únicos para cada TextView
+                int textViewNombreId = getResources().getIdentifier("textViewNombre" + (i + 1), "id", getPackageName());
+                int textViewPlataformaId = getResources().getIdentifier("textViewPlataforma" + (i + 1), "id", getPackageName());
+                int textViewAñoLanzamientoId = getResources().getIdentifier("textViewAñoLanzamiento" + (i + 1), "id", getPackageName());
+                int textViewGeneroId = getResources().getIdentifier("textViewGenero" + (i + 1), "id", getPackageName());
+                int textViewDesarrolladorId = getResources().getIdentifier("textViewDesarrollador" + (i + 1), "id", getPackageName());
 
-            textViewNombre.setText("Nombre: " + nombreJuego);
-            textViewPlataforma.setText("Plataforma: " + plataforma);
-            textViewAñoLanzamiento.setText("Año de Lanzamiento: " + añoLanzamiento);
-            textViewGenero.setText("Género: " + genero);
-            textViewDesarrollador.setText("Desarrollador: " + desarrollador);
+                // Actualiza tu interfaz de usuario con la información
+                TextView textViewNombre = findViewById(textViewNombreId);
+                TextView textViewPlataforma = findViewById(textViewPlataformaId);
+                TextView textViewAñoLanzamiento = findViewById(textViewAñoLanzamientoId);
+                TextView textViewGenero = findViewById(textViewGeneroId);
+                TextView textViewDesarrollador = findViewById(textViewDesarrolladorId);
 
-            String informacionJuego = String.format(
-              "Nombre: %s\nPlataforma: %s\nAño de Lanzamiento: %d\nGénero: %s\nDesarrollador: %s\n\n",
-               nombreJuego, plataforma, añoLanzamiento, genero, desarrollador);
+                // Añade información al TextView (puedes personalizar el formato)
+                String informacionJuego = String.format(
+                        "Nombre: %s\nPlataforma: %s\nAño de Lanzamiento: %d\nGénero: %s\nDesarrollador: %s\n\n",
+                        nombreJuego, plataforma, añoLanzamiento, genero, desarrollador);
 
                 // Agrega la información al TextView
-                textViewNombre.append(informacionJuego);
+                textViewNombre.setText("Nombre: " + nombreJuego);
+                textViewPlataforma.setText("Plataforma: " + plataforma);
+                textViewAñoLanzamiento.setText("Año de Lanzamiento: " + añoLanzamiento);
+                textViewGenero.setText("Género: " + genero);
+                textViewDesarrollador.setText("Desarrollador: " + desarrollador);
             }
         } catch (JSONException e) {
             Log.e("MostPlayed", "Error al analizar JSON: " + e.getMessage());
         }
     }
+
 
     private static class GetBubbleApi extends AsyncTask<String, Integer, String> {
 
