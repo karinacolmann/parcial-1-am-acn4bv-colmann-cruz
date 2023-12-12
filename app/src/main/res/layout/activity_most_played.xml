@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MostPlayed">
+
+    <LinearLayout
+        android:id="@+id/layoutBase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_search_color"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/layoutCenterDownload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="62dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:onClick="onBackButtonClick"
+            android:src="@drawable/round_arrow_back_ios_24"
+            android:contentDescription="@string/backbuttontomain"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCenterDownload"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutBase">
+
+
+        <TextView
+            android:id="@+id/most_played_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lilita_one"
+            android:text="@string/most_played_titulo"
+            android:textAlignment="center"
+            android:textColor="@color/bg_search_color"
+            android:textSize="30sp" />
+
+        <ScrollView
+            android:id="@+id/scrollBase"
+            android:layout_width="match_parent"
+            android:layout_height="504dp"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!--unico layout hijo del scroll-->
+            <LinearLayout
+                android:id="@+id/layoutCenterRowsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+             <!--FIN del unico layout hijo del scroll-->
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutCenterRowsContainer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewPuesto1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lilita_one"
+                            android:text="@string/textViewPuesto1"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:textAlignment="center"/>
+
+                            <TextView
+                                android:id="@+id/textViewNombre1"
+                                android:fontFamily="@font/alata"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/textViewNombre" />
+
+                            <TextView
+                                android:id="@+id/textViewPlataforma1"
+                                android:fontFamily="@font/alata"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/textViewPlataforma" />
+
+                            <TextView
+                                android:id="@+id/textViewAñoLanzamiento1"
+                                android:fontFamily="@font/alata"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/textViewAñoLanzamiento" />
+
+                            <TextView
+                                android:id="@+id/textViewGenero1"
+                                android:fontFamily="@font/alata"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/textViewGenero" />
+
+                            <TextView
+                                android:id="@+id/textViewDesarrollador1"
+                                android:fontFamily="@font/alata"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/textViewDesarrollador" />
+
+                        </LinearLayout>
+                <!--serapacion layout2-->
+                    <LinearLayout
+                        android:id="@+id/layoutCenterRowsContainer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textViewPuesto2"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto2" />
+                        <TextView
+                            android:id="@+id/textViewNombre2"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewNombre" />
+
+                        <TextView
+                            android:id="@+id/textViewPlataforma2"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewPlataforma" />
+
+                        <TextView
+                            android:id="@+id/textViewAñoLanzamiento2"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewAñoLanzamiento" />
+
+                        <TextView
+                            android:id="@+id/textViewGenero2"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewGenero" />
+
+                        <TextView
+                            android:id="@+id/textViewDesarrollador2"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewDesarrollador" />
+
+                    </LinearLayout>
+                <!--serapacion layout3-->
+                    <LinearLayout
+                        android:id="@+id/layoutCenterRowsContainer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textViewPuesto3"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto3" />
+                        <TextView
+                            android:id="@+id/textViewNombre3"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewNombre" />
+
+                        <TextView
+                            android:id="@+id/textViewPlataforma3"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewPlataforma" />
+
+                        <TextView
+                            android:id="@+id/textViewAñoLanzamiento3"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewAñoLanzamiento" />
+
+                        <TextView
+                            android:id="@+id/textViewGenero3"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewGenero" />
+
+                        <TextView
+                            android:id="@+id/textViewDesarrollador3"
+                            android:fontFamily="@font/alata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/textViewDesarrollador" />
+
+                    </LinearLayout>
+                <!--serapacion layout4-->
+                    <LinearLayout
+                android:id="@+id/layoutCenterRowsContainer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textViewPuesto4"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto4" />
+                <TextView
+                    android:id="@+id/textViewNombre4"
+                    android:fontFamily="@font/alata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewNombre" />
+
+                <TextView
+                    android:id="@+id/textViewPlataforma4"
+                    android:fontFamily="@font/alata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewPlataforma" />
+
+                <TextView
+                    android:id="@+id/textViewAñoLanzamiento4"
+                    android:fontFamily="@font/alata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewAñoLanzamiento" />
+
+                <TextView
+                    android:id="@+id/textViewGenero4"
+                    android:fontFamily="@font/alata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewGenero" />
+
+                <TextView
+                    android:id="@+id/textViewDesarrollador4"
+                    android:fontFamily="@font/alata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewDesarrollador" />
+
+            </LinearLayout>
+                <!--serapacion layout5-->
+                    <LinearLayout
+                    android:id="@+id/layoutCenterRowsContainer5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/textViewPuesto5"
+                            android:fontFamily="@font/lilita_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:background="@color/bg_search_color"
+                            android:textColor="#FFFFFF"
+                            android:text="@string/textViewPuesto5" />
+                    <TextView
+                        android:id="@+id/textViewNombre5"
+                        android:fontFamily="@font/alata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textViewNombre" />
+
+                    <TextView
+                        android:id="@+id/textViewPlataforma5"
+                        android:fontFamily="@font/alata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textViewPlataforma" />
+
+                    <TextView
+                        android:id="@+id/textViewAñoLanzamiento5"
+                        android:fontFamily="@font/alata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textViewAñoLanzamiento" />
+
+                    <TextView
+                        android:id="@+id/textViewGenero5"
+                        android:fontFamily="@font/alata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textViewGenero" />
+
+                    <TextView
+                        android:id="@+id/textViewDesarrollador5"
+                        android:fontFamily="@font/alata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textViewDesarrollador" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <!---->
+
+        </ScrollView>
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_vector_color"
+        app:itemIconTint="@drawable/vector_color"
+        app:itemTextColor="@drawable/vector_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutCenterDownload"
+        app:menu="@menu/menu_bottom_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

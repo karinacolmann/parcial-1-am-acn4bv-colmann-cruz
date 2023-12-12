@@ -1,5 +1,7 @@
 package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -19,6 +21,13 @@ public class FreeDownloadActivity extends AppCompatActivity {
 
         Button contentButton = new Button(this);
         contentButton.setText("Mystery Box");
+        contentButton.setTextColor(Color.parseColor("#8ED8B0"));
+
+        GradientDrawable background = new GradientDrawable();
+        background.setColor(getResources().getColor(R.color.green_box));
+        background.setCornerRadius(50f);
+        contentButton.setBackgroundDrawable(background);
+
 
         LinearLayout layoutTextBox = findViewById(R.id.layoutTextBox);
         layoutTextBox.addView (contentButton);
@@ -30,9 +39,10 @@ public class FreeDownloadActivity extends AppCompatActivity {
         );
 
         params.width = (int) 500;
+        params.height = (int) 100;
         contentButton.setLayoutParams(params);
         params.gravity = Gravity.CENTER;
-        params.topMargin = 30;
+        params.topMargin = 20;
 
         contentButton.setOnClickListener(new View.OnClickListener(){
 
@@ -50,7 +60,7 @@ public class FreeDownloadActivity extends AppCompatActivity {
     public void download(View v){
         ImageView imageView = findViewById(R.id.imageViewDownload);
         ImageDownload descarga = new ImageDownload (imageView);
-        descarga.execute("https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAXVmXVRJNUvqVFvIZtUoTwWgY_7u7fhAxC_FCIO9cFFeh9LTwWQBkjo2P87BGgelRJkhu8fLaDexHd95ZQ14WLRKIiXg=w2126-h1830");
+        descarga.execute("https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCwmBqrCADH5QBKc1kbPADosAVHjLH-WtSd4N6mqSkc3Lefszx-umZ-8RMbj_uenuy8fomO1sZ9hi9hKr_PTGogG19H5g=w2126-h1830");
     }
 
 

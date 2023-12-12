@@ -12,6 +12,7 @@
     <color name="row_box_text">#FF000000</color>
 
     <!-- colores de eventos botones -->
+
     <color name="release">#8BC34A</color>
     <color name="freeDownload">#FF9800</color>
     <color name="topSellers">#4CAF50</color>
@@ -19,4 +20,12 @@
     <color name="saleEvents">#2196F3</color>
     <color name="community">#F44336</color>
     <color name="crimson">#FF9FC0</color>
+
+    <!-- colores de eventos dinamicos -->
+
+    <color name="green_box">#418862</color>
+    <color name="scrollview_button">#FF3B3B</color>
+
+
+
 </resources>
