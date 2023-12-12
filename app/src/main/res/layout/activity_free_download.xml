@@ -58,7 +58,7 @@
                 android:id="@+id/textViewDecemberEventTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="@font/convergence"
                 android:text="@string/december_events_titleText"
                 android:textColor="#2E6046"
                 android:textSize="20sp"

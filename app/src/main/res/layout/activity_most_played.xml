@@ -49,7 +49,18 @@
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/most_played" />
+            android:src="@drawable/most_played"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/most_played_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lilita_one"
+            android:text="@string/most_played_titulo"
+            android:textAlignment="center"
+            android:textColor="@color/bg_search_color"
+            android:textSize="30sp" />
 
         <ScrollView
             android:id="@+id/scrollBase"
@@ -64,7 +75,8 @@
                 android:id="@+id/layoutCenterRowsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:orientation="vertical">
              <!--FIN del unico layout hijo del scroll-->
 
