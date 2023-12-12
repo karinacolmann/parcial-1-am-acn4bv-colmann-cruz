@@ -82,6 +82,7 @@
         android:onClick="onLoginButtonClick"
         android:text="@string/login_button_text"
         android:background="@drawable/background_loginregister_button"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"/>
