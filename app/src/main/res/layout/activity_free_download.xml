@@ -55,13 +55,13 @@
             android:background="#FFFFFF">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textViewDecemberEventTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:text="December Events"
-                android:textColor="#938989"
-                android:textSize="24sp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/december_events_titleText"
+                android:textColor="#2E6046"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/eventContainerNavidad"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -75,10 +75,10 @@
                 android:background="#AF6262"
                 android:fontFamily="@font/alata"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@id/imageView"
+                app:layout_constraintBottom_toTopOf="@id/textViewBubbleGamesHolidaySaleTitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/textViewDecemberEventTitle" >
 
 
                 <ImageButton
@@ -110,53 +110,75 @@
 
                     <TextView
                         android:id="@+id/subTextBoxes"
-                        android:layout_marginTop="8dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:layout_marginTop="8dp"
                         android:text="@string/halloween_subtext"
                         android:textAlignment="center"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
 
             </FrameLayout>
 
+
+            <TextView
+                android:id="@+id/textViewBubbleGamesHolidaySaleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/convergence"
+                android:text="@string/bubble_games_holiday_saleTitleText"
+                android:textColor="#054D7A"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
+                app:layout_constraintVertical_bias="0.75" />
+
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
+                android:layout_marginTop="88dp"
                 android:background="#00E1FD"
-                app:layout_constraintBottom_toTopOf="@+id/downloadButton"
+                android:contentDescription="@string/description_holidaysale"
                 app:layout_constraintEnd_toEndOf="@+id/eventContainerNavidad"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/eventContainerNavidad"
                 app:layout_constraintTop_toBottomOf="@+id/eventContainerNavidad"
-                app:srcCompat="@drawable/sale_event_2" />
-
+                app:srcCompat="@drawable/discount_banner" />
 
             <ImageView
                 android:id="@+id/imageViewDownload"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
+                android:contentDescription="@string/description_holidaysale2"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:srcCompat="@drawable/sale_event_2" />
+                app:srcCompat="@drawable/holiday_sale_banner" />
 
             <Button
                 android:id="@+id/downloadButton"
-                android:layout_width="177dp"
-                android:layout_height="50dp"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_surprise_button"
                 android:onClick="download"
                 android:text="@string/downloadButton"
-                android:textColor="#39B2FD"
-                android:background="@drawable/background_surprise_button"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="#317BB8"
+
+
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewDownload"
-                app:layout_constraintVertical_bias="0.504" />
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.791" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
