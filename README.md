@@ -12,3 +12,17 @@ Link a la descipción del parcial 2: https://docs.google.com/document/d/15HAPviL
 Link de Figma: https://www.figma.com/file/X3xZKwWbDGLqDvRes7yo1X/BUBBLE-GAME-APP?type=design&node-id=54500-24191&mode=design&t=cfK7QSzWGtvjl2nt-0
 
 Datos para acceder a la app: Mail "cruz.colmann@bubble.com", Contraseña "1122023".
+-------------------------------
+
+FINAL
+
+Pasos para acceder a la app:
+1- Loguearse con estos datos: Mail "cruz.colmann@bubble.com", Contraseña "1122023".
+2- Puede registrarse con un mail personal para crear un usuario nuevo (de esta forma recibirá un mail de verificación) y continuar con el proceso de inicio de sesión.
+
+Link a la descripción del final: https://docs.google.com/document/d/1ZT_-cP_kEqs8ZOj3GkmpPgPQmgd0K_XK_vKS6r15vHc/edit?usp=sharing
+
+Link de Figma: https://www.figma.com/file/X3xZKwWbDGLqDvRes7yo1X/BUBBLE-GAME-APP?type=design&node-id=54500-24191&mode=design&t=cfK7QSzWGtvjl2nt-0
+
+
+
