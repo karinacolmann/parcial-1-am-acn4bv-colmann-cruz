@@ -244,9 +244,7 @@ public class MainActivity extends AppCompatActivity {
                                  if ("cRuZ". equalsIgnoreCase(currentLastName)){
                                      updatedLastName = "Cruz";
                                      updatedName = "Eliana";
-                                     if (currentVerified) {
-                                         updatedVerified = false;
-                                     }else{
+                                     if (!currentVerified) {
                                          updatedVerified = true;
                                      }
 
@@ -254,9 +252,7 @@ public class MainActivity extends AppCompatActivity {
                                      updatedLastName = "Colmann";
                                      updatedName = "Karina";
 
-                                     if (currentVerified){
-                                         updatedVerified = false;
-                                     }else{
+                                     if (!currentVerified){
                                          updatedVerified = true;
                                      }
                                  }
