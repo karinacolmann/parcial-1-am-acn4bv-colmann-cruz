@@ -45,12 +45,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutBase">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/most_played"
-            android:visibility="gone" />
 
         <TextView
             android:id="@+id/most_played_titulo"
