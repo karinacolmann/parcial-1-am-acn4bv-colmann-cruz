@@ -144,7 +144,6 @@
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_marginTop="88dp"
-                android:background="#00E1FD"
                 android:contentDescription="@string/description_holidaysale"
                 app:layout_constraintEnd_toEndOf="@+id/eventContainerNavidad"
                 app:layout_constraintHorizontal_bias="0.0"

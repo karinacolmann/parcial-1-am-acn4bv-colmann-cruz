@@ -2,7 +2,7 @@ package com.curso.android.app.practica.parcial_1_am_acn4bv_colmann_cruz;
 
 public class Juegos {
     private String titulo;
-    private int img; // Identificador de la imagen en el directorio res/drawable
+    private int img;
 
     public Juegos (String titulo, int img) {
         this.titulo = titulo;

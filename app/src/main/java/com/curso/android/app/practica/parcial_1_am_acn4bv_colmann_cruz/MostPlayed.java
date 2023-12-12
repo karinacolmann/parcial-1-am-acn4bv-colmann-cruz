@@ -103,7 +103,7 @@ public class MostPlayed extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            // Procesa la respuesta JSON
+
             try {
                 JSONArray juegosArray = new JSONArray(s);
                 mostPlayed.mostrarInformacionEnUI(juegosArray);
