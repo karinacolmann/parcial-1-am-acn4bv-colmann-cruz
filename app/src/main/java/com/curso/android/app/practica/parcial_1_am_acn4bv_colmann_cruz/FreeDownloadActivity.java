@@ -60,7 +60,7 @@ public class FreeDownloadActivity extends AppCompatActivity {
     public void download(View v){
         ImageView imageView = findViewById(R.id.imageViewDownload);
         ImageDownload descarga = new ImageDownload (imageView);
-        descarga.execute("https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAXVmXVRJNUvqVFvIZtUoTwWgY_7u7fhAxC_FCIO9cFFeh9LTwWQBkjo2P87BGgelRJkhu8fLaDexHd95ZQ14WLRKIiXg=w2126-h1830");
+        descarga.execute("https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaCwmBqrCADH5QBKc1kbPADosAVHjLH-WtSd4N6mqSkc3Lefszx-umZ-8RMbj_uenuy8fomO1sZ9hi9hKr_PTGogG19H5g=w2126-h1830");
     }
 
 
