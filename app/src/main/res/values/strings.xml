@@ -63,11 +63,11 @@
 
 
     //FREE DOWNLOAD//
-    <string name="december_events_titleText">December Events</string>
+    <string name="december_events_titleText">DECEMBER EVENTS</string>
 
     <string name="christmas_eventTextTitle">Christmas Discount Event</string>
     <string name="halloween_subtext">Open the boxes and find amazing prizes!</string>
-    <string name="bubble_games_holiday_saleTitleText">Bubble Games Holiday Sale!</string>
+    <string name="bubble_games_holiday_saleTitleText">BUBBLE GAMES HOLIDAY SALE</string>
     <string name="holiday_sale_banner">HOLIDAY SALE BANNER</string>
     <string name="downloadButton">¡Sorpresa!</string>
 
@@ -80,7 +80,7 @@
 
 
     //MOST PLAYED//
-    <string name="most_played_titulo">Most Played!</string>
+    <string name="most_played_titulo">MOST PLAYED</string>
 
     <string name="textViewNombre">Nombre: </string>
     <string name="textViewPlataforma">Plataforma: </string>
